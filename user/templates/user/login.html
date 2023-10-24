@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <center>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'front/user/style.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'front/css/message.css' %}">-->
+    </center>
+</head>
+<body>
+<!--<header>-->
+<!--    {% if messages %}-->
+<!--        {% for message in messages %}-->
+<!--            <div class="alert {{ message.tags }}">-->
+<!--                <div class="closebtn">×</div>-->
+<!--                <i style="margin-right: 14px;" class="fa fa-exclamation fa-1x"></i>{{ message }}.-->
+<!--            </div>-->
+<!--        {% endfor %}-->
+<!--    {% endif %}-->
+<!--</header>-->
+  <div class="container">
+    <h2 class="login-title">Log in</h2>
+
+    <form class="login-form" action="{% url 'user_login_page' %}" method="POST">
+      {% csrf_token %}
+      <div>
+        <label for="name">Name </label>
+        <input
+               id="name"
+               type="text"
+               placeholder="username"
+               name="username"
+               required
+               />
+      </div>
+
+<!--      <div>-->
+<!--        <label for="email">Email </label>-->
+<!--        <input-->
+<!--               id="email"-->
+<!--               type="email"-->
+<!--               placeholder="email"-->
+<!--               name="email"-->
+<!--               required-->
+<!--               />-->
+<!--      </div>-->
+
+      <div>
+        <label for="password">Password </label>
+        <input
+               id="password"
+               type="password"
+               placeholder="password"
+               name="password"
+               required
+               />
+      </div>
+
+      <button class="btn btn--form" type="submit" value="Log in">
+        Log in
+      </button>
+    </form>
+</div>
+<!--===============================================================================================-->
+<!--    <script src="{% static 'front/user_javascript/main.js' %}"></script>-->
+        <script src="{% static 'front/js/messages.css' %}"></script>
+</body>
+</html>
+
+
+
+
+<!--<html lang="es">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+<!--    <link rel="stylesheet" href="{% static 'front/user/style.css' %}" />-->
+<!--    <title>Login Page</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <section>-->
+<!--      <div class="login-container">-->
+<!--        <h2>Login Category</h2>-->
+<!--        <form class="login-form" action="{% url 'user_login_page' %}" method="POST">-->
+<!--          {% csrf_token %}-->
+<!--          <div class="input-box">-->
+<!--            <span class="icon">-->
+<!--              <i class="fa-solid fa-envelope"></i>-->
+<!--            </span>-->
+<!--            <input required type="email" id="email">-->
+<!--            <label for="email">Enter your email</label>-->
+<!--          </div>-->
+<!--          <div class="input-box">-->
+<!--            <span class="icon">-->
+<!--              <i class="fa-solid fa-lock"></i>  </span>-->
+<!--            <input required type="password" id="contraseña">-->
+<!--            <label for="contraseña">Enter your password</label>-->
+<!--          </div>-->
+<!--          <div class="remember-forgot">-->
+<!--            <label>-->
+<!--              <input type="checkbox"> I accept </label>-->
+<!--            <a href="#">This login decorate category</a>-->
+<!--          </div>-->
+<!--          <button type="submit">Submit</button>-->
+<!--        </form>-->
+<!--        <div class="create-account">-->
+<!--          <a href="{% url 'home_page_dirs' %}">Change Category</a>-->
+<!--        </div> </div> </section> </body> </html>-->
+
+
+
+
+
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" href="{% static 'front/css/font_awesome_login_page.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'front/css/message.css' %}">-->
+<!--    </center>-->
+<!--</head>-->
+<!--<style>* {-->
+<!--    margin: 0;-->
+<!--    padding: 0;-->
+<!--    box-sizing: border-box;-->
+<!--    color: #fff;-->
+<!--    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;-->
+<!--}-->
+
+<!--.container {-->
+<!--    min-height: 100vh;-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    flex-direction: column;-->
+<!--    justify-content: center;-->
+<!--    background: url(https://img.freepik.com/free-vector/abstract-black-texture-background-hexagon_206725-413.jpg) no-repeat center;-->
+<!--    background-size: cover;-->
+<!--    animation: anim-bg 6s linear infinite alternate;-->
+<!--    padding: 20px;-->
+<!--    overflow: hidden;-->
+<!--}-->
+
+<!--@keyframes anim-bg {-->
+<!--    from {-->
+<!--        background-position: top;-->
+<!--    }-->
+<!--    to {-->
+<!--        background-position: bottom;-->
+<!--    }-->
+<!--}-->
+
+<!--.card {-->
+<!--    max-width: 380px;-->
+<!--    padding: 20px 15px;-->
+<!--    backdrop-filter: blur(10px);-->
+<!--    color: #fff;-->
+<!--    box-shadow: inset 2px 3px 20px #d9c6fb29, inset 2px 3px 50px #f1f1f14c, inset 2px 3px 200px #f2e3ff20;-->
+<!--    border-radius: 10px;-->
+<!--    /* overflow: hidden; */-->
+<!--}-->
+
+<!--@media (max-width: 528px) {-->
+<!--    .card {-->
+<!--        min-width: 100%;-->
+<!--    }-->
+
+<!--    .container {-->
+<!--        padding: 10px;-->
+<!--    }-->
+<!--}-->
+
+<!--label {-->
+<!--    font-size: 1.2em;-->
+<!--    letter-spacing: 1.8px;-->
+<!--}-->
+
+<!--.card form input {-->
+<!--    width: 100%;-->
+<!--    outline: none;-->
+<!--    padding: 8px;-->
+<!--    margin-bottom: 10px;-->
+<!--    margin-top: 6px;-->
+<!--    font-size: 1.1em;-->
+<!--    background: transparent;-->
+<!--    border: none;-->
+<!--    border-bottom: 2px solid #fff;-->
+<!--}-->
+
+<!--button {-->
+<!--    border: 0;-->
+<!--    padding: 10px;-->
+<!--    font-size: 1.2em;-->
+<!--    letter-spacing: 1.5px;-->
+<!--    border-radius: 5px;-->
+<!--    background: linear-gradient(45deg, #ba0d2d, #f84c77);-->
+<!--    color: #fff;-->
+<!--    margin-top: 20px;-->
+<!--    cursor: pointer;-->
+<!--}-->
+
+<!--.form-img {-->
+<!--    text-align: center;-->
+<!--    width: 100%;-->
+<!--    display: flex;-->
+<!--    justify-content: center;-->
+<!--}-->
+
+<!--.form-img img {-->
+<!--    width: 100px;-->
+<!--    height: 100px;-->
+<!--    border: 2px solid #ba0d2d;-->
+<!--    border-radius: 100px;-->
+<!--}-->
+
+<!--.img {-->
+<!--    position: relative;-->
+<!--    width: fit-content;-->
+<!--}-->
+
+<!--[class*="fa-"] {-->
+<!--    position: absolute;-->
+<!--    bottom: -5px;-->
+<!--    right: -10px;-->
+<!--    /* width: 40px;-->
+<!--    height: 40px; */-->
+<!--    font-size: 1.5em;-->
+<!--    border-radius: 100px;-->
+<!--    background: #ba0d2d;-->
+<!--    padding: 10px;-->
+<!--    cursor: pointer;-->
+<!--}-->
+
+<!--.btn {-->
+<!--    padding: 30px;-->
+<!--    transition: 01s;-->
+<!--    text-align: center;-->
+<!--    cursor: pointer;-->
+<!--}</style>-->
+
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h1>hover button to feel button escaping</h1>-->
+<!--        <div class="card" id="card">-->
+<!--            <form class="login-form" action="{% url 'user_login_page' %}" method="POST">-->
+<!--                {% csrf_token %}-->
+<!--                <div class="form-img">-->
+<!--                    <div class="img">-->
+<!--                        <img src="https://img.freepik.com/free-icon/user_318-644324.jpg" alt="">-->
+<!--                        <i class="fa fa-camera"></i>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="name">Username</label>-->
+<!--                    <input type="text" name="name" id="name" placeholder="Enter Username">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="phone">Mobile Number</label>-->
+<!--                    <input type="text" name="phone" id="phone" placeholder="+00-000-0000-000">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="email">Email Address</label>-->
+<!--                    <input type="text" name="email" id="email" placeholder="Enter Email">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="password">Password</label>-->
+<!--                    <input type="text" name="name" id="password" placeholder="Create Password">-->
+<!--                </div>-->
+<!--                <div class="btn" id="btn">-->
+<!--                    <button type="submit">Submit</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;===============================================================================================&ndash;&gt;-->
+<!--&lt;!&ndash;    <script> const card = document.getElementById('btn');&ndash;&gt;-->
+<!--&lt;!&ndash;    const card1 = document.getElementById('card');&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    card.addEventListener("mousemove", (e) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        let xAxis = (window.innerWidth / 2 - e.pageX) * 5;&ndash;&gt;-->
+<!--&lt;!&ndash;        let yAxis = (window.innerHeight / 2 - e.pageY) * 5;&ndash;&gt;-->
+<!--&lt;!&ndash;        card.style.transform = 'perspective(1000px) translateY(' + xAxis + 'px)' + 'translateX(' + yAxis + 'px)';&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+<!--&lt;!&ndash;    card.addEventListener("click", (e) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        e.preventDefault()&ndash;&gt;-->
+<!--&lt;!&ndash;        let xAxis = (window.innerWidth / 2 - e.pageX) / 1;&ndash;&gt;-->
+<!--&lt;!&ndash;        let yAxis = (window.innerHeight / 2 - e.pageY) / 1;&ndash;&gt;-->
+<!--&lt;!&ndash;        card.style.transform = 'perspective(1000px) translateX(' + xAxis + 'px)' + 'translateY(' + yAxis + 'px)';&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+<!--&lt;!&ndash;    card.addEventListener("mouseleave", (e) => {&ndash;&gt;-->
+<!--&lt;!&ndash;        let xAxis = (window.innerWidth / 2 - e.pageX) / 1;&ndash;&gt;-->
+<!--&lt;!&ndash;        let yAxis = (window.innerHeight / 2 - e.pageY) / 1;&ndash;&gt;-->
+<!--&lt;!&ndash;        card.style.transform = 'perspective(1000px) translateY(' + '0' + 'px)' + 'translateX(' + '0' + 'px)';&ndash;&gt;-->
+<!--&lt;!&ndash;    });</script>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
